@@ -2,6 +2,10 @@
 name = "tree-sitter-c-proc"
 version = "0.1.0"
 edition = "2021"
+description = "Proc macros for compile-time access to tree-sitter-c node kinds, keywords, and fields"
+license = "MIT"
+repository = "https://github.com/tree-sitter/tree-sitter-c"
+readme = "README.md"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -10,5 +14,22 @@ tree-sitter-c = "0.20.7"
 quote = "1.0.36"
 syn = "2.0.58"
 
+[dev-dependencies]
+tree-sitter = "0.20.10"
+atty = "0.2.14"
+
+[features]
+proc_macros = []
+
 [lib]
 proc-macro = true
+
+[[example]]
+name = "parse_c"
+path = "examples/parse_c.rs"
+required-features = ["proc_macros"]
+
+[[example]]
+name = "advanced_usage"
+path = "examples/advanced_usage.rs"
+required-features = ["proc_macros"]

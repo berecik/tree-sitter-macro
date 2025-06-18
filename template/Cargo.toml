@@ -1,0 +1,18 @@
+[package]
+name = "tree-sitter-LANG-proc"
+version = "0.1.0"
+edition = "2021"
+description = "Proc macros for compile-time access to tree-sitter-LANG node kinds, keywords, and fields"
+license = "MIT"
+repository = "https://github.com/tree-sitter/tree-sitter-LANG"
+readme = "README.md"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tree-sitter-LANG = "0.1.0"
+quote = "1.0.36"
+syn = "2.0.58"
+
+[lib]
+proc-macro = true
